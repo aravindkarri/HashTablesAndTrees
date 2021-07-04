@@ -3,6 +3,7 @@ package com.bridgelabz.hashtables;
 public class HashMap 
 {
 	HashLinkedList[] buckets;
+	HashNode head;
 
 	public HashMap()
 	{
@@ -61,7 +62,6 @@ public class HashMap
 		int bucketIndex = hashCode % buckets.length;
 		return bucketIndex;
 	}
-	HashNode head;
 
 	/**
 	 * Method to get position of key
