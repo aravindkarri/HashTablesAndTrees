@@ -43,8 +43,7 @@ public class HashMap
 	 */
 	public int get(String key)
 	{
-		int bucketIndex = computeBucketIndex(key);
-		HashLinkedList foundLinkedList = buckets[bucketIndex];
+		HashLinkedList foundLinkedList = position(key);
 		if(foundLinkedList != null)
 		{
 			HashNode foundNode = foundLinkedList.search(key);
@@ -57,12 +56,31 @@ public class HashMap
 	 * @param key
 	 * @return
 	 */
-
 	private int computeBucketIndex(String key) {
 		int hashCode = Math.abs(key.hashCode());
 		int bucketIndex = hashCode % buckets.length;
 		return bucketIndex;
 	}
+	HashNode head;
 
+	/**
+	 * Method to get position of key
+	 * @param key
+	 * @return
+	 */
+	public HashLinkedList position(String key) {
+		int bucketIndex = computeBucketIndex(key);
+		HashLinkedList searchLinkList = buckets[bucketIndex];
+		return searchLinkList;
+	}
+	/**
+	 * Method to remove key from hash table
+	 * @param key
+	 */
+	public void deleteWord(String key)
+	{
+		HashLinkedList searchLinkList = position(key);
+		searchLinkList.deleteNode(key);
+	}
 } 
 

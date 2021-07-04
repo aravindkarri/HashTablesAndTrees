@@ -34,4 +34,19 @@ public class HashLinkedList
 		newNode.next = head;
 		head = newNode;
 	}
+	/**
+	 * Method to delete node from linked list
+	 * @param key
+	 */
+	public void deleteNode(String key)
+	{
+		HashNode tempNode = head;
+		HashNode prevNode = head;
+		while(tempNode.key != key)
+		{
+			prevNode = tempNode;
+			tempNode = tempNode.next;
+		}
+		prevNode.next = tempNode.next;
+	}
 }

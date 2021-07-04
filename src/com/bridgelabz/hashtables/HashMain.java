@@ -35,5 +35,10 @@ public class HashMain
 		}
 		int frequency1 = hashMap1.get("into");
 		System.out.println("Freequency of given word is "+frequency1);
+
+		/**UC3
+		 * Delete a word from given paragraph
+		 */
+		hashMap1.deleteWord("avoidable");
 	}
 }
