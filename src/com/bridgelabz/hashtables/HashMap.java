@@ -8,20 +8,7 @@ public class HashMap
 	{
 		buckets = new HashLinkedList[20];
 	}
-	/**
-	 * Method to count frequency of word in given string
-	 */
-	public void countOfOccurance()
-	{
-		String sentence = "To be or not to be";
-		String[] words = sentence.toLowerCase().split(" ");
-		for ( String word : words)
-		{
-			put(word,1);
-		}
-		int frequency = get("be");
-		System.out.println("Freequency of given key is "+frequency);
-	}
+
 	/**
 	 * Method to map key,value pair on the hashmap
 	 * @param key
