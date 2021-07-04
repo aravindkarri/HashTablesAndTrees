@@ -70,8 +70,8 @@ public class BinarySearchTree<T extends Comparable<T>>
     {
         if(null == root)
             return 0;
-        int nodesLeftSubtree = (int) size(root.left);
-        int nodesRightSubtree = (int) size(root.right);
+        int nodesLeftSubtree = size(root.left);
+        int nodesRightSubtree = size(root.right);
         return nodesLeftSubtree + nodesRightSubtree + 1;
     }
 }
